@@ -1,0 +1,19 @@
+{
+  "name": "syrup-pool-data-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "repository": "git@github.com:pancakeswap/syrup-pool-data-api.git",
+  "author": "PancakeSwap",
+  "scripts": {
+    "format:check": "prettier --check '*/**/*.{js,ts}'",
+    "format:write": "prettier --write '*/**/*.{js,ts}'",
+    "lint": "eslint '*/**/*.{js,ts}'"
+  },
+  "keywords": [],
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/node": "^20.5.1",
+    "typescript": "^5.1.6"
+  }
+}

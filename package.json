@@ -5,6 +5,9 @@
   "main": "index.ts",
   "repository": "git@github.com:pancakeswap/syrup-pool-data-api.git",
   "author": "PancakeSwap",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "format:check": "prettier --check '*/**/*.{js,ts}'",
     "format:write": "prettier --write '*/**/*.{js,ts}'",

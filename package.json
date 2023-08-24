@@ -6,7 +6,7 @@
   "repository": "git@github.com:pancakeswap/syrup-pool-data-api.git",
   "author": "PancakeSwap",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "scripts": {
     "format:check": "prettier --check '*/**/*.{js,ts}'",

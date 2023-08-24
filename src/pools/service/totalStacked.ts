@@ -12,10 +12,10 @@ export const fetchTotalStaked = async (contractAddress: `0x${string}`, tokenAddr
         abi: alpTokenABI,
         address: tokenAddress,
         functionName: "balanceOf",
-        args: [contractAddress]
-      }
+        args: [contractAddress],
+      },
     ],
-    allowFailure: false
+    allowFailure: false,
   });
 
   return getBalanceAmount(new BigNumber(totalStaked.toString())) ?? 0;

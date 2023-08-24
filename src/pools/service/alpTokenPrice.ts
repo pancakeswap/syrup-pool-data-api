@@ -14,10 +14,10 @@ export const fetchAlpTokenPrice = async () => {
       {
         abi: apolloxABI,
         address: CONTRACT_ADDRESS,
-        functionName: "alpPrice"
-      }
+        functionName: "alpPrice",
+      },
     ],
-    allowFailure: false
+    allowFailure: false,
   });
 
   const alpUsdPrice = getBalanceAmount(new BigNumber(alpPrice.toString()), TOKEN_DECIMALS).toNumber();

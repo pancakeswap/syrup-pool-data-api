@@ -13,13 +13,13 @@ export const CHAIN_QUERY_NAME = {
   [ChainId.POLYGON_ZKEVM_TESTNET]: "polygonZkEVMTestnet",
   [ChainId.ZKSYNC]: "zkSync",
   [ChainId.ZKSYNC_TESTNET]: "zkSyncTestnet",
-  [ChainId.LINEA_TESTNET]: "lineaTestnet"
+  [ChainId.LINEA_TESTNET]: "lineaTestnet",
 } as const satisfies Record<ChainId, string>;
 
 const CHAIN_QUERY_NAME_TO_ID = Object.entries(CHAIN_QUERY_NAME).reduce((acc, [chainId, chainName]) => {
   return {
     [chainName.toLowerCase()]: chainId as unknown as ChainId,
-    ...acc
+    ...acc,
   };
 }, {} as Record<string, ChainId>);
 
@@ -28,7 +28,4 @@ export const getChainId = memoize((chainName: string) => {
   return CHAIN_QUERY_NAME_TO_ID[chainName.toLowerCase()] ? +CHAIN_QUERY_NAME_TO_ID[chainName.toLowerCase()] : undefined;
 });
 
-export const SUPPORTED_CHAINS = [
-  mainnet,
-  arbitrum
-];
+export const SUPPORTED_CHAINS = [mainnet, arbitrum];

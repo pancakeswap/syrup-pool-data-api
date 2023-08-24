@@ -267,5 +267,5 @@ export const ethereumTokens = {
     "CYBER",
     "CyberConnect",
     "https://cyberconnect.me/"
-  )
+  ),
 };

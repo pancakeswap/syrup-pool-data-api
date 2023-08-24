@@ -6,14 +6,19 @@ import { fetchEndTimestamp } from "./endTimestamp";
 import { fetchTotalStaked } from "./totalStacked";
 
 export const calculatePoolMetrics = async (poolsConfigs: SerializedPool[]) => {
-  return await Promise.all(poolsConfigs.map(value => fillMetric(value)));
+  return await Promise.all(poolsConfigs.map((value) => fillMetric(value)));
 };
 
 const fillMetric = async (poolConfig: SerializedPool) => {
   const totalStaked = await fetchTotalStaked(poolConfig.contractAddress, poolConfig.stakingToken.address);
   const stakingTokenPrice = await fetchAlpTokenPrice();
   const earningTokenPrice = await fetchCakeTokenPrice();
-  const apr = await getPoolAprByTokenPerSecond(stakingTokenPrice, earningTokenPrice, totalStaked, poolConfig.tokenPerSecond);
+  const apr = await getPoolAprByTokenPerSecond(
+    stakingTokenPrice,
+    earningTokenPrice,
+    totalStaked,
+    poolConfig.tokenPerSecond
+  );
   const endTimestamp = await fetchEndTimestamp(poolConfig.contractAddress);
 
   poolConfig.metrics.totalStaked = totalStaked;

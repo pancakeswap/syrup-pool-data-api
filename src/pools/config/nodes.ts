@@ -11,6 +11,5 @@ export const PUBLIC_NODES = {
   [ChainId.POLYGON_ZKEVM_TESTNET]: "https://rpc.public.zkevm-test.net",
   [ChainId.ZKSYNC]: "https://mainnet.era.zksync.io",
   [ChainId.ZKSYNC_TESTNET]: "https://testnet.era.zksync.dev",
-  [ChainId.LINEA_TESTNET]: "https://rpc.linea.build"
+  [ChainId.LINEA_TESTNET]: "https://rpc.linea.build",
 } satisfies Record<ChainId, string>;
-

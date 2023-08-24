@@ -1,7 +1,6 @@
 import { ChainId, ERC20Token } from "@pancakeswap/sdk";
 import { CAKE } from "./common";
 
-
 export const arbTokens = {
   cake: CAKE[ChainId.ARBITRUM_ONE],
   alp: new ERC20Token(
@@ -19,5 +18,5 @@ export const arbTokens = {
     "A",
     "MOCK Token A",
     "https://mock-token.com/"
-  )
+  ),
 };

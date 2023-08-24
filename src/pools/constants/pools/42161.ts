@@ -10,15 +10,15 @@ export const arbPool: SerializedPool[] = [
     stakingToken: arbTokens.alp,
     earningToken: arbTokens.cake,
     contractAddress: "0x1b08a836d43719EF2a7D8F3bb2A093EF3DBc9D09",
-    tokenPerSecond: 100000000
+    tokenPerSecond: 100000000,
   },
   {
     sousId: 2,
     stakingToken: arbTokens.mck,
     earningToken: arbTokens.cake,
     contractAddress: "0x1b08a836d43719EF2a7D8F3bb2A093EF3DBc9D09",
-    tokenPerSecond: 100000000
-  }
+    tokenPerSecond: 100000000,
+  },
 ].map((p) => ({
   ...p,
   contractAddress: getAddress(p.contractAddress) as `0x${string}`,
@@ -29,8 +29,8 @@ export const arbPool: SerializedPool[] = [
     earningTokenPrice: 0,
     stakingTokenPrice: 0,
     apr: 0,
-    endTimestamp: 0
-  }
+    endTimestamp: 0,
+  },
 }));
 
 export const arbitrumPool: SerializedPool[] = [...arbPool];

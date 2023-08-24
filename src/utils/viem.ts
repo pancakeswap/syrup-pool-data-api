@@ -11,19 +11,19 @@ export const viewClients = SUPPORTED_CHAINS.reduce((prev, cur) => {
       transport: fallback(
         [
           http(PUBLIC_NODES[cur.id] as string, {
-            timeout: 15_000
-          })
+            timeout: 15_000,
+          }),
         ],
         {
-          rank: false
+          rank: false,
         }
       ),
       batch: {
         multicall: {
-          batchSize: 1024 * 200
-        }
-      }
-    })
+          batchSize: 1024 * 200,
+        },
+      },
+    }),
   };
 }, {} as Record<ChainId, PublicClient>);
 

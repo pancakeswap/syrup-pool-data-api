@@ -10,10 +10,10 @@ export const fetchEndTimestamp = async (contractAddress: Address) => {
       {
         abi: smartChefABI,
         address: contractAddress,
-        functionName: "endTimestamp"
-      }
+        functionName: "endTimestamp",
+      },
     ],
-    allowFailure: false
+    allowFailure: false,
   });
 
   return Number(endTimestamp) ?? 0;

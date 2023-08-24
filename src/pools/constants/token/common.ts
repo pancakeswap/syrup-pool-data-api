@@ -76,6 +76,5 @@ export const CAKE = {
     "CAKE",
     "PancakeSwap Token",
     "https://pancakeswap.finance/"
-  )
+  ),
 };
-

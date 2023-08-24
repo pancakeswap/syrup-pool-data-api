@@ -17,6 +17,5 @@ export const fetchTotalStaked = async (contractAddress: `0x${string}`, tokenAddr
     ],
     allowFailure: false,
   });
-
-  return getBalanceAmount(new BigNumber(totalStaked.toString())) ?? 0;
+  return Number(getBalanceAmount(new BigNumber(totalStaked.toString()))) ?? 0;
 };

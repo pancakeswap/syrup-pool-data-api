@@ -3,21 +3,13 @@ import { SerializedPool } from "../types";
 import { SerializedWrappedToken } from "@pancakeswap/token-lists";
 import { arbTokens } from "../token/42161";
 
-// TODO: update the config when real pool will be added
 export const arbPool: SerializedPool[] = [
   {
     sousId: 1,
     stakingToken: arbTokens.alp,
     earningToken: arbTokens.cake,
-    contractAddress: "0x1b08a836d43719EF2a7D8F3bb2A093EF3DBc9D09",
-    tokenPerSecond: 100000000,
-  },
-  {
-    sousId: 2,
-    stakingToken: arbTokens.mck,
-    earningToken: arbTokens.cake,
-    contractAddress: "0x1b08a836d43719EF2a7D8F3bb2A093EF3DBc9D09",
-    tokenPerSecond: 100000000,
+    contractAddress: "0x3dBdE2682330105902fb482d9849C270aa8E0881",
+    tokenPerSecond: 0.01135,
   },
 ].map((p) => ({
   ...p,

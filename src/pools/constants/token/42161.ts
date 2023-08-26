@@ -9,14 +9,6 @@ export const arbTokens = {
     18,
     "ALP",
     "ApolloX LP",
-    "https://pancakeswap.finance/" // TODO: change it
-  ),
-  mck: new ERC20Token( // TODO: remove on PRD [for test purpose only]
-    ChainId.ARBITRUM_ONE,
-    "0x47B2286A76acF9a99B30c8D8261EF6Eb066dafC7",
-    18,
-    "A",
-    "MOCK Token A",
-    "https://mock-token.com/"
-  ),
+    "https://www.apollox.finance/"
+  )
 };

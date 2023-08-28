@@ -10,7 +10,7 @@
   ],
   "headers": [
     {
-      "source": "/api/v1/pools",
+      "source": "/api/v1/alp",
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
@@ -40,7 +40,7 @@
     }
   ],
   "functions": {
-    "api/v1/pools.ts": {
+    "api/v1/alp.ts": {
       "memory": 1024,
       "maxDuration": 10
     }

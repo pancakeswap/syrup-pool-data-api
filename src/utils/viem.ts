@@ -27,8 +27,6 @@ export const viewClients = SUPPORTED_CHAINS.reduce((prev, cur) => {
   };
 }, {} as Record<ChainId, PublicClient>);
 
-console.log(viewClients, 'viewClients')
-
 export const getViemClients = ({ chainId }: { chainId: ChainId }) => {
   return viewClients[chainId];
 };

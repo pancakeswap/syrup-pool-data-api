@@ -20,23 +20,22 @@
     "@types/lodash": "^4.14.197",
     "@types/node": "^20.5.1",
     "dotenv": "^10.0.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@pancakeswap/sdk": "^5.2.1",
-    "@pancakeswap/token-lists": "^0.0.8",
+    "@pancakeswap/sdk": "^5.7.3",
+    "@pancakeswap/token-lists": "^0.0.9",
+    "@pancakeswap/tokens": "^0.5.6",
     "@types/node": "^20.5.1",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
     "@vercel/node": "^3.0.0",
-    "@wagmi/chains": "^1.7.0",
     "axios": "^1.4.0",
     "bignumber.js": "^9.1.1",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.2",
     "prettier": "^2.4.1",
-    "ts-node": "^10.2.1",
-    "typescript": "^5.1.6"
+    "ts-node": "^10.2.1"
   }
 }

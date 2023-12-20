@@ -3,8 +3,8 @@ import { ChainId } from "@pancakeswap/sdk";
 import { Address } from "viem";
 import { smartChefABI } from "../../abi/smartChef";
 
-export const fetchEndTimestamp = async (contractAddress: Address) => {
-  const client = getViemClients({ chainId: ChainId.ARBITRUM_ONE });
+export const fetchEndTimestamp = async (contractAddress: Address, chainId: ChainId) => {
+  const client = getViemClients({ chainId });
   const [endTimestamp] = await client.multicall({
     contracts: [
       {

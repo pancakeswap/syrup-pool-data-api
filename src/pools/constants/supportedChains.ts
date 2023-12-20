@@ -1,9 +1,10 @@
 import { ChainId } from "@pancakeswap/sdk";
-import { SerializedPool } from "./types";
 import { ethereumPools } from "./pools/1";
+import { opbnbPool } from "./pools/204";
 import { arbitrumPool } from "./pools/42161";
+import { SerializedPool } from "./types";
 
-export const SUPPORTED_CHAIN_IDS = [ChainId.ETHEREUM, ChainId.ARBITRUM_ONE] as const;
+export const SUPPORTED_CHAIN_IDS = [ChainId.ETHEREUM, ChainId.ARBITRUM_ONE, ChainId.OPBNB] as const;
 
 export type SupportedChainId = (typeof SUPPORTED_CHAIN_IDS)[number];
 
@@ -18,6 +19,7 @@ export type PoolsConfigByChain<TChainId extends ChainId> = {
 export const POOLS_CONFIG_BY_CHAIN = {
   [ChainId.ETHEREUM]: ethereumPools,
   [ChainId.ARBITRUM_ONE]: arbitrumPool,
+  [ChainId.OPBNB]: opbnbPool,
 } as PoolsConfigByChain<SupportedChainId>;
 
 export const getPoolsConfig = (chainId: ChainId) => {

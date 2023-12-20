@@ -1,6 +1,6 @@
 import { ChainId } from "@pancakeswap/sdk";
 import memoize from "lodash/memoize";
-import { arbitrum, mainnet } from "@wagmi/chains";
+import { arbitrum, mainnet, opBNB } from "viem/chains";
 
 export const CHAIN_QUERY_NAME = {
   [ChainId.ETHEREUM]: "eth",
@@ -14,6 +14,8 @@ export const CHAIN_QUERY_NAME = {
   [ChainId.ZKSYNC]: "zkSync",
   [ChainId.ZKSYNC_TESTNET]: "zkSyncTestnet",
   [ChainId.LINEA_TESTNET]: "lineaTestnet",
+  [ChainId.OPBNB]: "opbnb",
+  [ChainId.OPBNB_TESTNET]: "opbnbTestnet",
 } as const satisfies Record<ChainId, string>;
 
 const CHAIN_QUERY_NAME_TO_ID = Object.entries(CHAIN_QUERY_NAME).reduce((acc, [chainId, chainName]) => {
@@ -28,4 +30,4 @@ export const getChainId = memoize((chainName: string) => {
   return CHAIN_QUERY_NAME_TO_ID[chainName.toLowerCase()] ? +CHAIN_QUERY_NAME_TO_ID[chainName.toLowerCase()] : undefined;
 });
 
-export const SUPPORTED_CHAINS = [mainnet, arbitrum];
+export const SUPPORTED_CHAINS = [mainnet, arbitrum, opBNB];

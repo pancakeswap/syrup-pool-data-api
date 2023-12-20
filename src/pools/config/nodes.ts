@@ -1,4 +1,5 @@
 import { ChainId } from "@pancakeswap/sdk";
+import { opBNB } from "viem/chains";
 
 export const PUBLIC_NODES = {
   [ChainId.BSC]: "https://rpc.ankr.com/bsc",
@@ -12,4 +13,5 @@ export const PUBLIC_NODES = {
   [ChainId.ZKSYNC]: "https://mainnet.era.zksync.io",
   [ChainId.ZKSYNC_TESTNET]: "https://testnet.era.zksync.dev",
   [ChainId.LINEA_TESTNET]: "https://rpc.linea.build",
+  [ChainId.OPBNB]: opBNB.rpcUrls.public.http[0],
 } satisfies Record<ChainId, string>;

@@ -17,6 +17,7 @@ interface PoolMetrics {
   stakingTokenPrice: number;
   earningTokenPrice: number;
   apr: number;
+  alpApr?: number;
   endTimestamp: number;
 }
 

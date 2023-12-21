@@ -10,7 +10,7 @@
   ],
   "headers": [
     {
-      "source": "/api/v1/alp",
+      "source": "/api/v1/alp*",
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
@@ -41,6 +41,10 @@
   ],
   "functions": {
     "api/v1/alp.ts": {
+      "memory": 1024,
+      "maxDuration": 10
+    },
+    "api/v1/alp/opbnb.ts": {
       "memory": 1024,
       "maxDuration": 10
     }

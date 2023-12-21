@@ -37,10 +37,43 @@
           "value": "no-cache"
         }
       ]
+    },
+    {
+      "source": "/api/v1/alp/:id",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Accept, Content-Type, Origin"
+        },
+        {
+          "key": "Access-Control-Max-Age",
+          "value": "86400"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        }
+      ]
     }
   ],
   "functions": {
     "api/v1/alp.ts": {
+      "memory": 1024,
+      "maxDuration": 10
+    },
+    "api/v1/alp/opbnb.ts": {
       "memory": 1024,
       "maxDuration": 10
     }

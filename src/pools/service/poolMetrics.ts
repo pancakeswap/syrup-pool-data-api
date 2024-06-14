@@ -1,7 +1,7 @@
 import { SerializedPool } from "../constants/types";
 import { fetchAlpTokenPrice } from "./alpTokenPrice";
 import { getPoolAprByTokenPerSecond } from "./poolApr";
-import { fetchCakeTokenPrice } from "./cakeTokenPrice";
+import { fetchTokenPrice } from "./cakeTokenPrice";
 import { fetchEndTimestamp } from "./endTimestamp";
 import { fetchTotalStaked } from "./totalStacked";
 import { ChainId } from "@pancakeswap/sdk";
@@ -14,7 +14,7 @@ export const calculatePoolMetrics = async (poolsConfigs: SerializedPool[], chain
 const fillMetric = async (poolConfig: SerializedPool, chainId) => {
   const totalStaked = await fetchTotalStaked(poolConfig.contractAddress, poolConfig.stakingToken.address, chainId);
   const stakingTokenPrice = await fetchAlpTokenPrice();
-  const earningTokenPrice = await fetchCakeTokenPrice();
+  const earningTokenPrice = await fetchTokenPrice(poolConfig.earningToken);
   const apr = await getPoolAprByTokenPerSecond(
     stakingTokenPrice,
     earningTokenPrice,

@@ -10,5 +10,13 @@ export const arbTokens = {
     "ALP",
     "ApolloX LP",
     "https://www.apollox.finance/"
-  )
+  ),
+    arb: new ERC20Token(
+        ChainId.ARBITRUM_ONE,
+        "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        18,
+        "ARB",
+        "Arbitrum",
+        "https://arbitrum.foundation/"
+    ),
 };

@@ -27,9 +27,16 @@ const fillMetric = async (poolConfig: SerializedPool, chainId) => {
   poolConfig.metrics.totalStaked = totalStaked;
   poolConfig.metrics.stakingTokenPrice = stakingTokenPrice;
   poolConfig.metrics.earningTokenPrice = earningTokenPrice;
-  poolConfig.metrics.apr = apr;
-  poolConfig.metrics.alpApr = alpApr;
-  poolConfig.metrics.endTimestamp = endTimestamp;
+  if (chainId === ChainId.ARBITRUM_ONE && poolConfig.sousId === 6) {
+    poolConfig.metrics.apr = 0;
+    poolConfig.metrics.alpApr = 0;
+    poolConfig.metrics.endTimestamp = 1723610066;
+  } else {
+    poolConfig.metrics.apr = apr;
+    poolConfig.metrics.alpApr = alpApr;
+    poolConfig.metrics.endTimestamp = endTimestamp;
+  }
+
 
   return poolConfig;
 };

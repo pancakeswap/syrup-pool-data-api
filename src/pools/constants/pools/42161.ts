@@ -46,6 +46,13 @@ export const arbPool: SerializedPool[] = [
     contractAddress: "0x97E3384447B52A63374EBA93cb36e02a20633926",
     tokenPerSecond: 0.0310019841,
   },
+  {
+    sousId: 7,
+    stakingToken: arbTokens.alp,
+    earningToken: arbTokens.arb,
+    contractAddress: "0xaa0de632a4071642d72ceb03577f5534ea196927",
+    tokenPerSecond: 0.043402,
+  },
 ].map((p) => ({
   ...p,
   contractAddress: getAddress(p.contractAddress) as `0x${string}`,
